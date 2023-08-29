@@ -17,6 +17,9 @@ docker run --rm -it \
   --entrypoint /bin/bash \
   --name "test-docker-pnpm" \
   sinlov/docker-pnpm:latest
+
+# then can use
+pnpm --version
 ```
 
 ## source repo

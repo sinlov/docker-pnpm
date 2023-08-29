@@ -13,7 +13,7 @@ ROOT_PARENT_SWITCH_TAG :=20.5.1
 INFO_TEST_BUILD_DOCKER_PARENT_IMAGE =node
 INFO_BUILD_DOCKER_FILE =Dockerfile
 INFO_TEST_BUILD_DOCKER_FILE =build.dockerfile
-INFO_TEST_BUILD_DOCKER_CONTAINER_ARGS =--version
+INFO_TEST_BUILD_DOCKER_CONTAINER_ARGS =pnpm --version
 # MakeImage.mk settings end
 
 include z-MakefileUtils/MakeImage.mk
