@@ -11,8 +11,12 @@ FROM node:20.5.1
 
 ARG PNPM_VERSION=8.7.0
 
+ARG PNPM_HOME=/root/.local/share/pnpm
+ENV PNPM_HOME=${PNPM_HOME}
+
 RUN npm --registry https://registry.npmmirror.com \
   install -g pnpm@${PNPM_VERSION} && \
-  rm -rf $(npm config get cache)
+  rm -rf $(npm config get cache) && \
+  mkdir -p ${PNPM_HOME}/store
 
 # ENTRYPOINT ["pnpm"]
